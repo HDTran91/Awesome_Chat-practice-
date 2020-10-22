@@ -1,0 +1,22 @@
+{
+  "name": "awesome_chat-practice-",
+  "version": "1.0.0",
+  "description": "Awesome_Chat https://github.com/HDTran91/Awesome_Chat-practice-.git",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HDTran91/Awesome_Chat-practice-.git"
+  },
+  "author": "HDTran",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HDTran91/Awesome_Chat-practice-/issues"
+  },
+  "homepage": "https://github.com/HDTran91/Awesome_Chat-practice-#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
