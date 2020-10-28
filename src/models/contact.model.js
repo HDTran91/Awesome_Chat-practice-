@@ -11,4 +11,15 @@ let ContactSchema = new Schema({
 
 });
 
+// write function to work with contact model.
+ContactSchema.statics = {
+  createNew(item) {
+
+    return this.create(item);
+  }
+
+}
+
+//
+
 module.exports = mongoose.model ("user", ContactSchema);
