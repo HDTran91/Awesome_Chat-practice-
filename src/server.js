@@ -1,8 +1,9 @@
 var express = require("express");
 import ConnectDB from "./config/connectDB";
-import ContactModel from "./models/contact.model";
+import configViewEngine from "./config/viewEngine";
 
-var app = express();
+//Init app
+let app = express();
 
 //connect to MongoDB
 ConnectDB();
@@ -10,20 +11,19 @@ ConnectDB();
 // var hostname = "localhost";
 // var port = 8017;
 
-app.get("/test_database", async(req, res) => {
-  try {
-    let item = {
-      userID: "214124214",
-      contactID: "akjvjasviasoicaio",
+//config view engine
+configViewEngine(app);
 
-    };
-    let contact = await ContactModel.createNew(item);
-    res.send(contact);
-  }catch(err) {
-    console.log(err);
-  }
+app.get("/",(req, res) => {
+  return res.render("main/master");
 
 });
+
+app.get("/login-register",(req, res) => {
+  return res.render("auth/loginRegister");
+
+});
+
 
 app.listen(process.env.APP_PORT, process.env.APP_HOST, () => {
   console.log(`Hello Gacon, I' am running at ${process.env.APP_HOST}:${process.env.APP_PORT}/`);
