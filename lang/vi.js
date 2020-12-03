@@ -5,3 +5,15 @@ export const transValidation = {
   password_confirmation_incorrect: "mat khau khong trung khop",
 
 };
+
+export const transErrors = {
+
+  account_in_use: "Email is already used"
+}
+
+export const transSuccess = {
+  userCreated: (userEmail) => {
+    return `your account <strong>${userEmail}</strong> is created, please check email to activate.`
+  }
+
+};
