@@ -14,7 +14,8 @@ let router = express.Router();
   router.get("/login-register", auth.getLoginRegister);
   router.post("/register", authValid.register, auth.postRegister);
   
-
+  //link for verify account
+  router.get("/verify/:token", auth.verifyAccount);
 
   return app.use("/", router);
   
