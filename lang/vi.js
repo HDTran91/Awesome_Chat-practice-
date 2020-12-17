@@ -9,14 +9,21 @@ export const transValidation = {
 export const transErrors = {
 
   account_in_use: "Email is already used",
-  token_undefined: "account is already activated"
+  token_undefined: "token is not existed",
+  login_failed: "Username or Password is not correct!",
+  account_not_active: "Email is already registered but not active yet",
+  server_error: "server has errors, please contact with our support team to fix it"
 }
 
 export const transSuccess = {
   userCreated: (userEmail) => {
     return `your account <strong>${userEmail}</strong> is created, please check email to activate.`
   },
-  account_active: "activate successfully, you can login now"
+  account_active: "activate successfully, you can login now",
+  loginSuccess: (username) =>{
+    
+    return `hello ${username}, have a good day.`}
+  
 
 };
 
