@@ -22,7 +22,8 @@ export const transSuccess = {
   account_active: "activate successfully, you can login now",
   loginSuccess: (username) =>{
     
-    return `hello ${username}, have a good day.`}
+    return `hello ${username}, have a good day.`},
+  logout_success: "Log out successful, have a good day"
   
 
 };
